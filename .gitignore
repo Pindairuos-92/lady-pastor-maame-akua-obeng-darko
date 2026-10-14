@@ -1,0 +1,11 @@
+# Local Freebuff tooling
+.freebuff/
+
+# Raw photo originals (site uses assets/img/)
+MINING/
+MOD/
+
+# OS cruft
+Thumbs.db
+Desktop.ini
+.DS_Store
