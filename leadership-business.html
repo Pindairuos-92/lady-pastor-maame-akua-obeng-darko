@@ -687,6 +687,12 @@ a { color: inherit; text-decoration: none; }
 .portrait--landscape { aspect-ratio: 16 / 10; }
 .portrait--square { aspect-ratio: 1 / 1; }
 
+/* Anchor the crop to the subject's face when a tall photo is
+   framed landscape (e.g. ministry page: face sits ~9-29% from top;
+   a 16/10 frame shows ~49% of the image height, so keep the anchor
+   near the top or the head gets cut off). */
+.portrait--face img { object-position: 50% 5%; }
+
 .portrait--navy {
   background:
     radial-gradient(120% 100% at 70% 10%, rgba(198, 164, 94, 0.14), transparent 55%),

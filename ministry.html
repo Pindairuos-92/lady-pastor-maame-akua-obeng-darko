@@ -687,6 +687,12 @@ a { color: inherit; text-decoration: none; }
 .portrait--landscape { aspect-ratio: 16 / 10; }
 .portrait--square { aspect-ratio: 1 / 1; }
 
+/* Anchor the crop to the subject's face when a tall photo is
+   framed landscape (e.g. ministry page: face sits ~9-29% from top;
+   a 16/10 frame shows ~49% of the image height, so keep the anchor
+   near the top or the head gets cut off). */
+.portrait--face img { object-position: 50% 5%; }
+
 .portrait--navy {
   background:
     radial-gradient(120% 100% at 70% 10%, rgba(198, 164, 94, 0.14), transparent 55%),
@@ -1664,7 +1670,7 @@ a { color: inherit; text-decoration: none; }
       <div class="container">
         <div class="grid-2">
           <div class="grid-2__media reveal reveal--left">
-            <figure class="portrait portrait--tall portrait--offset portrait--navy" style="margin:0">
+            <figure class="portrait portrait--landscape portrait--face portrait--offset portrait--navy" style="margin:0">
               <img src="assets/img/maame-ministry.jpg" alt="Lady Pastor Maame Akua Obeng Darko — Pastor of Refiners House Ministry International" width="1600" height="2049" loading="eager">
             </figure>
           </div>
